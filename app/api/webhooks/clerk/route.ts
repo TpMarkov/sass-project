@@ -3,6 +3,8 @@ import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import { Webhook } from "svix";
+import { handleError } from "@/lib/utils";
+import User from "@/lib/database/models/user.model";
 
 import { createUser, deleteUser, updateUser } from "@/lib/actions/user.actions";
 import { connectToDatabase } from "@/lib/database/mongoose"; // Adjust path
