@@ -294,6 +294,11 @@ const TransformationForm = ({
               className="flex size-full flex-col"
               render={({ field }) => (
                 <MediaUploader
+                  uploadPreset={
+                    type === "removeBackground"
+                      ? "jsm_background_remove"
+                      : "jsm_imaginify"
+                  }
                   onValueChange={field.onChange}
                   setImage={setImage}
                   publicId={field.value ?? ""}

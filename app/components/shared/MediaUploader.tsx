@@ -15,6 +15,7 @@ type UploadedImage = {
 };
 
 type MediaUploaderProps = {
+  uploadPreset: string;
   onValueChange: (value: string) => void;
   setImage: React.Dispatch<React.SetStateAction<UploadedImage | null>>;
   publicId: string;
@@ -23,6 +24,7 @@ type MediaUploaderProps = {
 };
 
 const MediaUploader = ({
+  uploadPreset = "jsm_imaginify",
   onValueChange,
   setImage,
   image,
@@ -57,7 +59,7 @@ const MediaUploader = ({
 
   return (
     <CldUploadWidget
-      uploadPreset="jsm_imaginify"
+      uploadPreset={uploadPreset || "jsm_image"}
       options={{
         multiple: false,
         resourceType: "image",
