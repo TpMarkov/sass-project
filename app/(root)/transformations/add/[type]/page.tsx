@@ -16,6 +16,8 @@ const AddTransformationTypePage = async ({
 
   const user = await getUserById(userId);
 
+  console.log(user);
+
   return (
     <>
       <Header title={transformation.title} subtitle={transformation.subTitle} />
@@ -24,7 +26,7 @@ const AddTransformationTypePage = async ({
           action="Add"
           userId={user._id}
           type={transformation.type as TransformationTypeKey}
-          creditBalance={user.cretidBalance}
+          creditBalance={user.creditBalance}
         />
       </section>
     </>

@@ -312,6 +312,34 @@ body {
   @apply flex-center absolute left-[50%] top-[50%] size-full -translate-x-1/2 -translate-y-1/2 flex-col gap-2 rounded-[10px] border bg-[#384262]/90
 }
 
+@utility p-16-regular {
+  @apply font-normal text-[16px] leading-[140%];
+}
+
+@utility p-24-bold {
+  @apply font-bold text-[24px] leading-[120%];
+}
+
+@utility dark-400 {
+  @apply text-[#7986AC];
+}
+
+@utility button {
+  @apply py-4 px-6 flex-center gap-3 rounded-full font-normal text-[16px] leading-[140%] focus-visible:ring-offset-0 focus-visible:ring-transparent
+}
+
+@utility home {
+  @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner;
+}
+
+@utility home-heading {
+  @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px] max-w-[500px] flex-wrap text-center text-white shadow-sm;
+}
+
+@utility p-14-medium {
+  @apply font-medium text-white text-[14px] leading-[120%];
+}
+
 /* =======================
    5. Keyframes
    ======================= */

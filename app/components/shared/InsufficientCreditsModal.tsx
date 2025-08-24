@@ -22,7 +22,7 @@ export const InsufficientCreditsModal = () => {
       <AlertDialogContent>
         <AlertDialogHeader>
           <div className="flex-between">
-            <p className="p-16-semibold text-dark-400">Insufficient Credits</p>
+            <p className="p-16-semibold dark-400">Insufficient Credits</p>
             <AlertDialogCancel
               className="border-0 p-0 hover:bg-transparent"
               onClick={() => router.push("/profile")}
@@ -44,7 +44,7 @@ export const InsufficientCreditsModal = () => {
             height={122}
           />
 
-          <AlertDialogTitle className="p-24-bold text-dark-600">
+          <AlertDialogTitle className="p-24-bold dark-600">
             Oops.... Looks like you&#39;ve run out of free credits!
           </AlertDialogTitle>
 
@@ -53,19 +53,22 @@ export const InsufficientCreditsModal = () => {
             more credits.
           </AlertDialogDescription>
         </AlertDialogHeader>
+
         <AlertDialogFooter>
-          <AlertDialogCancel
-            className="button w-full bg-purple-100 text-dark-400"
-            onClick={() => router.push("/profile")}
-          >
-            No, Cancel
-          </AlertDialogCancel>
-          <AlertDialogAction
-            className="button w-full bg-purple-gradient  bg-cover"
-            onClick={() => router.push("/credits")}
-          >
-            Yes, Proceed
-          </AlertDialogAction>
+          <div className="flex flex-col w-full gap-y-5">
+            <AlertDialogCancel
+              className="button w-full bg-purple-100 dark-400"
+              onClick={() => router.push("/profile")}
+            >
+              No, Cancel
+            </AlertDialogCancel>
+            <AlertDialogAction
+              className="button w-full bg-purple-gradient bg-cover"
+              onClick={() => router.push("/credits")}
+            >
+              Yes, Proceed
+            </AlertDialogAction>
+          </div>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
